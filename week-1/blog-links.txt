@@ -1,0 +1,8 @@
+// Write a blog about objects and its internal representation in Javascript in medium.
+https://send2shivaa.medium.com/understanding-objects-in-javascript-c5d857670e9a
+
+// What is the difference between window, screen, and document in Javascript? - publish as a blog in medium.
+https://send2shivaa.medium.com/window-vs-document-vs-screen-in-javascript-d27edcfd83a3
+
+// why there is a difference in behavior for copying contents in primitive and non primitive type? - publish as a blog in medium.
+https://send2shivaa.medium.com/javascript-primitive-vs-composite-types-dad3ceb8821f
