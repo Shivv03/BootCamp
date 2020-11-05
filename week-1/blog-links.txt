@@ -6,3 +6,6 @@ https://send2shivaa.medium.com/window-vs-document-vs-screen-in-javascript-d27edc
 
 // why there is a difference in behavior for copying contents in primitive and non primitive type? - publish as a blog in medium.
 https://send2shivaa.medium.com/javascript-primitive-vs-composite-types-dad3ceb8821f
+
+// How do you copy by value a composite data type? - publish as a blog in medium
+https://send2shivaa.medium.com/1b48b8d1a849
