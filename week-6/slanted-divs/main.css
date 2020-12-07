@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Yrsa&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Yrsa', serif;
+}
+
+.heading::first-letter{
+    font-family: 'Alex Brush', cursive;
+    font-size: 5rem;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: #6b6969;
+    width: 100%;
+    height: 100%;
+}
+
+.page {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+.title {
+    position: relative;
+    margin: auto;
+    width: max-content;
+    top: -2%;
+    font-size: 3rem;
+    font-weight: bold;
+    background: #0dcaf0 !important;
+}
+
+.slanted-div {
+    position: relative;
+}
+
+.slanted-div::after {
+    position: absolute;
+    width: 100%;
+    height: 75%;
+    content: '';
+    background: inherit;
+    bottom: 0;
+    transform-origin: top right;
+    transform: skewY(-4deg);
+    z-index: 1;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    z-index: 2;
+}
+
+.border-top {
+    border-top-left-radius: 25%;
+    border-top-right-radius: 25%;
+}
+
+.border-bottom {
+    border-bottom-left-radius: 25%;
+    border-bottom-right-radius: 25%;
+}
+
+.border-bottom::after {
+    z-index: -1;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.bg-info {
+    background-color: #0dcaf0 !important;
+}
+
+.bg-warning {
+    background-color: #ffc107 !important;
+}
+
+.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.bg-dark {
+    background-color: #212529 !important;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+.p-10 {
+    padding: 100px;
+}
+
+@media only screen and (max-width: 670px) {
+    .page {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 961px) {
+    .page {
+        width: 55%;
+        margin: 40px;
+    }
+}
+
+@media only screen and (min-width: 671px) and (max-width: 960px) {
+    .page {
+        width: 550px;
+        margin: 40px;
+    }
+}
+
+.border-box {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    background-color: transparent;
+    border: 5px dotted rgba(2, 2, 2, 0.5);
+    border-radius: 5%;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 0; 
+    right: 0; 
+    margin: auto;
+}
