@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="common.css">
+<link rel="stylesheet" href="page2.css">
+<link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="header-container column box-center">
+            <div class="nav-bar">
+                <nav class="nav-bar-container container">
+                    <div class='logo'>
+                        <p>HTML / CSS ASSESSMENT</p>
+                    </div>
+    
+                    <input class = "menu-btn" type="checkbox" id="menu-btn"/>
+                    <label class = "menu-icon" for = "menu-btn">
+                        <span class="nav-icon"></span>
+                    </label>
+    
+                    <div class="menu-container">
+                        <ul class = "menu">
+                            <li><a href='index.html'>Home</a></li>
+                            <li><a href='#' class="active" >Form Submission</a></li>
+                            <li><a href='product.html'>Product Grid</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>  
+    
+    <div class="page column-box">
+        <form>
+            <h2 class="title">Form Design</h2>
+            <div class="row">
+            <div class="col-6 text-left align-items-center">
+                <label for="fname">Full Name</label>
+            </div>
+            <div class="col-6 text-right icon-input">
+                <input type="text" id="fname" name="fullname" placeholder="Full Name">
+                <i class="fa fa-user" aria-hidden="true"></i>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-6 text-left align-items-center">
+                    <label for="address1">Address Line 1</label>
+                </div>
+                <div class="col-6 text-right icon-input">
+                    <input type="text" id="address1" name="address1" placeholder="Address Line 1">
+                    <i class="fas fa-address-book" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 text-left align-items-center">
+                    <label for="address2">Address Line 2</label>
+                </div>
+                <div class="col-6 text-right icon-input">
+                    <input type="text" id="address2" name="address2" placeholder="Address Line 2">
+                    <i class="fas fa-address-book" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 text-left align-items-center">
+                    <label for="city">City</label>
+                </div>
+                <div class="col-6 text-right icon-input">
+                    <input type="text" id="city" name="city" placeholder="City">
+                    <i class="fas fa-building" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 text-left align-items-center">
+                    <label for="state">State / Province</label>
+                </div>
+                <div class="col-6 text-right icon-input">
+                    <input type="text" id="state" name="state" placeholder="State/Province">
+                    <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 text-left align-items-center">
+                    <label for="zip">Postal Code ZIP</label>
+                </div>
+                <div class="col-6 text-right icon-input">
+                    <input type="text" id="zip" name="zip" placeholder="Postal Code ZIP">
+                    <i class="fas fa-envelope-square" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 text-left align-items-center">
+                <label for="country">Country</label>
+            </div>
+            <div class="col-6 text-right icon-input">
+                <select id="country" name="country">
+                <option value="AU">Australia</option>
+                <option value="IN">India</option>
+                <option value="UK">England</option>
+                </select>
+                <i class="fas fa-map" aria-hidden="true"></i>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-6 text-left align-items-center">
+                    <label for="email">Email</label>
+                </div>
+                <div class="col-6 text-right icon-input">
+                    <input type="text" id="email" name="email" placeholder="Email">
+                    <i class="far fa-envelope-open" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6 text-left align-items-center">
+                    <label for="mobile">Phone Number</label>
+                </div>
+                <div class="col-6 text-right icon-input">
+                    <input type="text" id="mobile" name="mobile" placeholder="Phone Number">
+                    <i class="fas fa-phone" aria-hidden="true"></i>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <input type="submit" class="bg-success" value="Submit">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

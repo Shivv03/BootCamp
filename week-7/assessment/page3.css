@@ -1,0 +1,45 @@
+.product {
+    margin: 6.5px;
+    padding: 10px;
+    border: .5px solid #cac8c8;
+}
+
+.content  h2 {
+    padding: 5px 0px;
+}
+
+.image {
+    width: 250;
+    height: 150px;
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid grey;
+}
+
+input[type=submit] {
+    color: white;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: max-content;
+}
+
+@media (max-width: 600px) { 
+    .col-4 {
+        width: 85%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 960px) {
+    .col-4 {
+        width: 45%;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    .col-4 {
+        width: 31%;
+    }
+}
+
