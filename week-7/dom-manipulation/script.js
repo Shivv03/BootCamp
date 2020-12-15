@@ -17,7 +17,7 @@ let header = createElement('header', '',page);
 
 let headerImage = createElement('div', 'header-image', header);
 let img = createElement('img', 'image', headerImage);
-img.src = 'images/display-picture.jpg';
+img.src = 'images/display-picture-min.jpg';
 img.alt = "display-picture";
 
 let headerInfo = createElement('div', 'header-info', header);
