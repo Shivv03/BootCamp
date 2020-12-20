@@ -1,0 +1,22 @@
+#display{
+    display: flex;
+    align-items: center;
+}
+
+.operators,.operation,.numbers{
+    width: 100%;
+    outline: none;
+    border: none;
+    border: 1px solid black;
+}
+
+.operators:focus,.numbers:focus{
+    outline: none;
+    background-color: #d3d3d3  !important;
+}
+
+.equals{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}

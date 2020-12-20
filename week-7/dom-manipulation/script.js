@@ -173,7 +173,7 @@ let mainInfoSubSection1ContentDesc =  createElement('p', 'info-long-desc white',
 let mainInfoSubSection2Header = mainInfoSubSection2.appendChild(mainInfoSubSection1Header.cloneNode(true));
     mainInfoSubSection2Header.childNodes[1].childNodes[0].innerText = `EDUCATION`;
 let mainInfoSubSection2Content1 = createElement('div', 'content-container column-box', mainInfoSubSection2);
-    mainInfoSubSection2Content1.innerHTML = ` <h4 class="info-short-desc">2013 to 2017</h4>
+    mainInfoSubSection2Content1.innerHTML = `<h4 class="info-short-desc">2013 to 2017</h4>
     <p class="info-long-desc white">
         M.N.M Jain Engineering College 
     </p>
@@ -186,6 +186,7 @@ let mainInfoSubSection2Content2 = mainInfoSubSection2.appendChild(mainInfoSubSec
     mainInfoSubSection2Content2.childNodes[5].innerText = ` HSLC - 83.25%`;
 
 let mainInfoSubSection2Content3 = mainInfoSubSection2.appendChild(mainInfoSubSection2Content1.cloneNode(true));
+    console.log(mainInfoSubSection2Content3.childNodes);
     mainInfoSubSection2Content3.childNodes[1].innerText = `2011`;
     mainInfoSubSection2Content3.childNodes[3].innerText = `Oxford Matriculation Higher Secondary School`;
     mainInfoSubSection2Content3.childNodes[5].innerText = `SSLC - 88%`;
@@ -205,4 +206,3 @@ let mainInfoSubSection3Content2 = mainInfoSubSection3.appendChild(mainInfoSubSec
     mainInfoSubSection3Content2.childNodes[1].innerText = `Senior ML Data Associate`;
     mainInfoSubSection3Content2.childNodes[3].innerText = `Amazon Development Center Pvt Ltd.`;
     mainInfoSubSection3Content2.childNodes[5].innerText = `(May 2017  to  May 2020)`;
-    console.log(mainInfoSubSection3Content2);

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="bootstrap-5.0.0-alpha3-dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <title>Calculator</title>
+</head>
+<body>
+    
+    <div id="calculator" class="container-fluid d-flex justify-content-center align-items-center p-0 bg-dark bg-gradient calculator vh-100">
+        <div class="col-md-5 col-xl-3 col-11 overflow-hidden">
+            <div class="bg-dark row p-4" id="display">
+                <h5 class="col-6 text-white">Calculator</h5>
+                <div class="calculator-display col-12 text-right fs-2 text-white">0</div>
+                <input type="text" name="" class="calculator-result col-12 text-right fs-2" value=0 disabled id="result">
+            </div>
+            <div class="row m-0 calculator-keys">
+                <div class="col-3 p-0">
+                    <input type="button" value="+" data-action="add" class="operators fs-1 bg-light py-2" >
+                </div>
+                <div class="col-3 p-0 ">
+                    <input type="button" value="-" data-action="subtract" class="operators fs-1 bg-light py-2" >
+                </div>
+                <div class="col-3 p-0">
+                    <input type="button" value="*" data-action="multiply" class="operators fs-1 bg-light py-2" >
+                </div>
+                <div class="col-3 p-0">
+                    <input type="button" value="/" data-action="divide" class="operators fs-1 bg-light py-2" >
+                </div>
+                <div class="col-9 p-0">
+                    <div class="row m-0">
+                        <div class="col-4 p-0 ">
+                            <input type="button" value="1" class="numbers fs-1 bg-light py-1" ">
+                        </div>
+                        <div class="col-4 p-0 ">
+                            <input type="button" value="2" class="numbers fs-1 bg-light py-1" ">
+                        </div>
+                        <div class="col-4 p-0 ">
+                            <input type="button" value="3" class="numbers fs-1 bg-light py-1" ">
+                        </div>
+                        <div class="col-4 p-0 ">
+                            <input type="button" value="4" class="numbers fs-1 bg-light py-1" ">
+                        </div>
+                        <div class="col-4 p-0 ">
+                            <input type="button" value="5" class="numbers fs-1 bg-light py-1" ">
+                        </div>
+                        <div class="col-4 p-0 ">
+                            <input type="button" value="6" class="numbers fs-1 bg-light py-1" ">
+                        </div>
+                        <div class="col-4 p-0 ">
+                            <input type="button" value="7" class="numbers fs-1 bg-light py-1" ">
+                        </div>
+                        <div class="col-4 p-0 ">
+                            <input type="button" value="8" class="numbers fs-1 bg-light py-1" ">
+                        </div>
+                        <div class="col-4 p-0 ">
+                            <input type="button" value="9" class="numbers fs-1 bg-light py-1" >
+                        </div>
+                        <div class="col-4 p-0 ">
+                            <input type="button" value="0" class="numbers fs-1 bg-light py-1" >
+                        </div>
+                        <div class="col-4 p-0 ">
+                            <input type="button" value="." class="numbers fs-1 bg-light py-1" >
+                        </div>
+                        <div class="col-4 p-0 ">
+                            <input type="button" value="AC" data-action="clear" class="numbers fs-1 bg-light py-1" >
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="col-3 p-0 position-relative">
+                    <div class="col-12 p-0">
+                        <input type="button" value="=" data-action="calculate" class="equals fs-1 bg-danger py-1" >
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
