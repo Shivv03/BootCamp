@@ -4,15 +4,13 @@ document.body.append(paragraph);
 paragraph.setAttribute('class','countdown');
 
 const startCountDown = (cb) => {
-    setTimeout(function() {
-        paragraph.innerHTML = '10';
-        body.style.backgroundColor = getRandomColor();
-        cb(countdownTimer8);
-    },1000)
+    paragraph.innerHTML = '10';
+    body.style.backgroundColor = getRandomColor();
+    cb(countdownTimer8);
 }
 
 const countdownTimer9 = (cb) => {
-    setTimeout(function() {
+    setTimeout(() => {
         paragraph.innerHTML = '9';
         body.style.backgroundColor = getRandomColor();
         cb(countdownTimer7);
@@ -20,7 +18,7 @@ const countdownTimer9 = (cb) => {
 }
 
 const countdownTimer8 = (cb) => {
-    setTimeout(function() {
+    setTimeout(() => {
         paragraph.innerHTML = '8';
         body.style.backgroundColor = getRandomColor();
         cb(countdownTimer6)
@@ -28,7 +26,7 @@ const countdownTimer8 = (cb) => {
 }
 
 const countdownTimer7 = (cb) => {
-    setTimeout(function() {
+    setTimeout(() => {
         paragraph.innerHTML = '7';
         body.style.backgroundColor = getRandomColor();
         cb(countdownTimer5)
@@ -36,7 +34,7 @@ const countdownTimer7 = (cb) => {
 }
 
 const countdownTimer6 = (cb) => {
-    setTimeout(function() {
+    setTimeout(() => {
         paragraph.innerHTML = '6';
         body.style.backgroundColor = getRandomColor();
         cb(countdownTimer4)
@@ -44,7 +42,7 @@ const countdownTimer6 = (cb) => {
 }
 
 const countdownTimer5 = (cb) => {
-    setTimeout(function() {
+    setTimeout(() => {
         paragraph.innerHTML = '5';
         body.style.backgroundColor = getRandomColor();
         cb(countdownTimer3)
@@ -52,7 +50,7 @@ const countdownTimer5 = (cb) => {
 }
 
 const countdownTimer4 = (cb) => {
-    setTimeout(function() {
+    setTimeout(() => {
         paragraph.innerHTML = '4';
         body.style.backgroundColor = getRandomColor();
         cb(countdownTimer2)
@@ -60,7 +58,7 @@ const countdownTimer4 = (cb) => {
 }
 
 const countdownTimer3 = (cb) => {
-    setTimeout(function() {
+    setTimeout(() => {
         paragraph.innerHTML = '3';
         body.style.backgroundColor = getRandomColor();
         cb(countdownTimer1)
@@ -68,7 +66,7 @@ const countdownTimer3 = (cb) => {
 }
 
 const countdownTimer2 = (cb) => {
-    setTimeout(function() {
+    setTimeout(() => {
         paragraph.innerHTML = '2';
         body.style.backgroundColor = getRandomColor();
         cb(displayWishes)
@@ -76,7 +74,7 @@ const countdownTimer2 = (cb) => {
 }
 
 const countdownTimer1 = (cb) => {
-    setTimeout(function() {
+    setTimeout(() => {
         paragraph.innerHTML = '1';
         body.style.backgroundColor = getRandomColor();
         cb()
@@ -84,7 +82,7 @@ const countdownTimer1 = (cb) => {
 }
 
 const displayWishes = () => {
-    setTimeout(function() {
+    setTimeout(()=> {
         body.style.backgroundColor = getRandomColor();
         paragraph.innerHTML = 'Happy Independence Day!';
         paragraph.style.fontWeight = 'bold';
