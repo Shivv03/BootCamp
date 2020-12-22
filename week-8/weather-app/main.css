@@ -12,6 +12,10 @@
     color: #ffffff;
 }
 
+#container {
+    padding-top: 56px !important;
+}
+
 #icon {
     transition: all 1s;
     animation: rotate 5s linear infinite;
@@ -20,7 +24,7 @@
 body {
     background-image: url(images/night.webp);
     background-repeat: repeat;
-    background-size: cover;
+    background-size: 100% 100%;
     background-position: center;
     position: relative;
     width: 100%;
@@ -30,5 +34,11 @@ body {
 @keyframes rotate {
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) { 
+    #container {
+        padding-top: 105px !important;
     }
 }

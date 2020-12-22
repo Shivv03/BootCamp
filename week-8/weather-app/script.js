@@ -10,14 +10,14 @@ const createElement = (element , classes , parentElement) =>{
 
 
 let container = createElement('div', 'container-lg', document.body);
-container.style.padding = "56px 0px 0px 0px";
-let infoText = createElement('p', 'text-center d-none mt-2 fs-4', container);
+container.id = "container";
+let infoText = createElement('p', 'text-center d-none mt-1 fs-4', container);
 let row = createElement('div', 'row', container);
 
 
 const createWeatherCard = (country) =>  {
-    let cardContainer = createElement('div', 'col-lg-4 col-12 px-5 py-2 border-2 mt-2', row);
-    let card = createElement('div', 'card border-2 border-dark bg-custom', cardContainer);
+    let cardContainer = createElement('div', 'col-lg-4 col-12 px-5 py-2', row);
+    let card = createElement('div', 'card border-2 border-dark rounded-3 bg-custom', cardContainer);
     let cardHeader = createElement('div', 'card-header bg-dark text-white', card);
     let cardHeaderContent = createElement('h5', 'card-title text-center', cardHeader);
     cardHeaderContent.innerHTML = country.name;
