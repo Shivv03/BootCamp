@@ -42,3 +42,9 @@ body {
         padding-top: 105px !important;
     }
 }
+
+@media (max-width: 600px) { 
+    body {
+        background-image: url(images/night.webp) 50% top !important;
+    }
+}
