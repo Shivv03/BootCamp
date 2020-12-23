@@ -3,8 +3,16 @@
     height: 100px;
 }
 
+.weather-icon {
+    height: 86px;
+}
+
 .bg-custom {
     background-color: #18161565 !important;
+}
+
+.bg-custom-50 {
+    background-color: #1414139d !important;
 }
 
 #search {
@@ -13,12 +21,22 @@
 }
 
 #container {
-    padding-top: 56px !important;
+    padding-top: 65px !important;
 }
 
-#icon {
+.icon {
     transition: all 1s;
     animation: rotate 5s linear infinite;
+}
+
+.card{
+    transition: .3s transform cubic-bezier(.155,1.105,.295,1.12),.3s box-shadow,.3s -webkit-transform cubic-bezier(.155,1.105,.295,1.12);
+    cursor: pointer;
+}
+
+.card:hover{
+     transform: scale(1.05);
+     background-color: #181615ad !important;
 }
 
 body {
