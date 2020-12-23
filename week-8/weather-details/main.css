@@ -63,6 +63,6 @@ body {
 
 @media (max-width: 600px) { 
     body {
-        background-image: url(images/night.webp) 50% top !important;
+        background-image: url(images/night_sm.jpg) !important;
     }
 }
