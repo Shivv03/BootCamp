@@ -1,8 +1,10 @@
 const resultContainer = document.getElementById("resultContainer");
+const scoresContainer = document.getElementById("scoresContainer");
 const result = document.getElementById("result");
 const resultPrefix = document.getElementById("resultPrefix");
 const resultInfo = document.getElementById("resultInfo");
 const btnContainer = document.getElementById("btnContainer");
+const loader = document.getElementById("loader");
 let name,score;
 
 const dispScores = ()=>{
@@ -40,7 +42,7 @@ const submitQuiz = async () =>{
     if(prevRecord != null && prevRecord.score >= score){   
         result.innerHTML = `Congrats ${name}! You Scored: <strong>${score}</strong>`
         resultInfo.innerHTML = `Your Current HighScore: <strong>${prevRecord.score}</strong>`;
-        getAllScores();
+        getTopScores();
     }
     else{
         result.innerHTML = `Congrats ${name}! You Scored: ${score}`;
@@ -62,7 +64,7 @@ const saveScore = async (dbRecord)=>{
                             "Content-type": "application/json; charset=UTF-8",
                         }
                     })
-    getAllScores();
+     getTopScores();
 };
 
 const createElement = (elem , classes , parentElem) =>{
@@ -72,7 +74,7 @@ const createElement = (elem , classes , parentElem) =>{
     return createdElement;
 }
 
-const getAllScores = async ()=>{
+const getTopScores = async ()=>{
     let emailId = localStorage.getItem("emailId");
     let apiResponse = await fetch(`https://600ad9bb778d1a00177948d8.mockapi.io/users/score?sortBy=score&order=desc`);
    let scores = await apiResponse.json();
@@ -80,8 +82,32 @@ const getAllScores = async ()=>{
     let userScore= scores.find(obj => obj.name === name);
     let topScores = scores.slice(0, 3);
     if(topScores.indexOf(userScore) == -1 ) {
+        userScore.position = scores.indexOf(userScore) + 1;
         topScores.push(userScore);
     }
+    topScores.forEach((element,index) => {
+       let tr = createElement("tr",``,tableBody);
+       if(name != null && name === element.name){
+        tr.setAttribute('class',"table-active");
+       }
+       let pos = element.position ? userScore.position : index + 1;
+       tr.innerHTML = `
+            <td scope="col">${pos}</td>
+            <td scope="col">${element.name}</td>
+            <td scope="col">${element.score}</td>
+       `;
+   });
+   loader.classList.add('d-none');
+   scoresContainer.classList.remove('d-none');
+};
+
+const getAllScores = async ()=>{
+    let emailId = localStorage.getItem("emailId");
+    let apiResponse = await fetch(`https://600ad9bb778d1a00177948d8.mockapi.io/users/score?sortBy=score&order=desc`);
+   let scores = await apiResponse.json();
+    let tableBody = document.getElementById("tableBody");
+    let userScore= scores.find(obj => obj.name === name);
+    let topScores = scores.slice(0, 5);
     topScores.forEach((element,index) => {
        let tr = createElement("tr",``,tableBody);
        if(name != null && name === element.name){
@@ -93,6 +119,8 @@ const getAllScores = async ()=>{
             <td scope="col">${element.score}</td>
        `;
    });
+   loader.classList.add('d-none');
+   scoresContainer.classList.remove('d-none');
 };
 
 dispScores();

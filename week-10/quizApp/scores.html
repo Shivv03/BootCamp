@@ -18,7 +18,12 @@
                 </form>
             </div>
             <h1 class="text-center">Quick Quiz- High Scores</h1>
-            <div id="scoresContainer" class="container mt-1 p-2">
+            <section class="text-center loader row mt-5 pt-5" id="loader">
+                <div class="spinner-border text-light" style="width: 7rem; height: 7rem;" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </section>
+            <div id="scoresContainer" class="container score-board mt-1 p-2 d-none">
                 <table class="table table-warning mt-3 pt-5">
                     <thead>
                         <tr>

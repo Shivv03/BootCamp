@@ -1,13 +1,12 @@
 const question = document.getElementById("question");
 const choices = Array.from(document.getElementsByClassName("choice-text"));
 const questionCounterText = document.getElementById("questionCounter");
+const category = document.getElementById("category");
 const scoreBoardText = document.getElementById("scoreBoard");
 const progressBarFull = document.getElementById("progressBarFull");
 const userNameContainer = document.getElementById("userContainer");
 const loader = document.getElementById("loader");
 const quizBox = document.getElementById("quizBox");
-
-
 
 let currentQuestion = {};
 let acceptingAnsers = false;
@@ -26,6 +25,9 @@ const getURL = () => {
      let category = urlParams.get("category");
      let difficulty = urlParams.get("difficulty");
      userName = urlParams.get("userId");
+     if(!userName) {
+        return window.location.assign("index.html");
+     }
      updateUserName(userName);
      let url = `https://opentdb.com/api.php?amount=${MAX_QUESTIONS}&type=multiple`
      if(category != 'any' && category != null){
@@ -63,6 +65,7 @@ const getQuestions = async () => {
         answerChoices.forEach((choice,index)=> {
             formattedQuizData["choice" + (index+1)] = choice;
         });
+        formattedQuizData.category = quizData.category
         return formattedQuizData
    });
    startGame();
@@ -80,6 +83,7 @@ getNewQuestion = () => {
     const questionIndex = Math.floor(Math.random()*availableQuestions.length);
     currentQuestion = availableQuestions[questionIndex];
     question.innerHTML = currentQuestion.question;
+    category.innerHTML = currentQuestion.category;
     choices.forEach(choice => {
         const number = choice.dataset['number'];
         choice.innerHTML = currentQuestion['choice' + number]
