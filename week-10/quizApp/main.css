@@ -19,3 +19,7 @@
     height: 1.5rem;
     width: 100%;
 }
+
+#quizContainer {
+    margin-top: 2.3% !important;
+}

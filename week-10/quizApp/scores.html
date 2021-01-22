@@ -9,15 +9,17 @@
 
 <body class="bg-dark bg-gradient text-white">
     <section class="container vh-100 d-flex flex-column justify-content-center align-items-center">
-            <h1 class="text-center">Quick Quiz- Scores</h1>
-            <div id="resultContainer" class="alert alert-danger d-none my-2" role="alert">
+            <div id="resultContainer" class="alert alert-warning d-none my-2 mb-3 p-3" role="alert">
                 <h4 id="result" class="alert-heading"></h4>
-                <p id="resultPrefix"></p>
                 <hr>
                 <p id="resultInfo" class="fs-5"></p>
-              </div>
+                <form action="index.html">
+                    <input type="submit" class="btn btn-primary w-100" value="Play again">
+                </form>
+            </div>
+            <h1 class="text-center">Quick Quiz- High Scores</h1>
             <div id="scoresContainer" class="container mt-1 p-2">
-                <table class="table table-primary mt-3 pt-5">
+                <table class="table table-warning mt-3 pt-5">
                     <thead>
                         <tr>
                         <th scope="col">#</th>
@@ -28,6 +30,11 @@
                     <tbody id="tableBody">
                     </tbody>
                 </table>
+            </div>
+            <div id="btnContainer">
+                <form action="index.html">
+                    <input type="submit" class="btn btn-primary mt-1 w-100" value="Home">
+                </form>
             </div>
     </section>
 </body>
