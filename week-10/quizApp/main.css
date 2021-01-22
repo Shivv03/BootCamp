@@ -1,0 +1,21 @@
+.choice-container:hover {
+    cursor: pointer;
+    box-shadow: 0 0.4rem 1.4rem 0 rgba(86, 185, 235, 0.5);
+    transform: translateY(-0.3rem);
+    transition: transform 150ms;
+}
+
+.correct {
+    background-color: #30ec5c96 !important;
+    color: white;
+}
+
+.incorrect {
+    background-color: #e21b1bb6 !important;
+    color: white;
+}
+
+#progressBar {
+    height: 1.5rem;
+    width: 100%;
+}
