@@ -2,7 +2,7 @@ const resultContainer = document.getElementById("resultContainer");
 const result = document.getElementById("result");
 const resultPrefix = document.getElementById("resultPrefix");
 const resultInfo = document.getElementById("resultInfo");
-let userId,score;
+let name,score;
 
 const dispScores = ()=>{
         try{
@@ -10,7 +10,7 @@ const dispScores = ()=>{
             if(quizResult != null) {
                 localStorage.removeItem("quizResult");
                 results = quizResult.split('~')
-                userId=results[0];
+                name=results[0];
                 score=results[1];
                 submitQuiz();
             } else {
@@ -25,7 +25,7 @@ const dispScores = ()=>{
 
 const checkPreviousRecord = async ()=>{
     let emailId = localStorage.getItem("emailId");
-    let apiResponse = await fetch(`https://600ad9bb778d1a00177948d8.mockapi.io/users/score?search=${userId}`);
+    let apiResponse = await fetch(`https://600ad9bb778d1a00177948d8.mockapi.io/users/score?search=${name}`);
    let result = await apiResponse.json(); 
    console.log(result)
    if(result.length > 0)
@@ -54,7 +54,7 @@ const saveScore = async (dbRecord)=>{
     let response = await fetch(`https://600ad9bb778d1a00177948d8.mockapi.io/users/score/${dbRecord != null ? dbRecord.id : ''}`,{
                         method: `${dbRecord != null ? 'PUT' : 'POST'}`,
                         body : JSON.stringify({
-                            userId,
+                            name,
                             score
                         }),
                         headers: {
@@ -63,7 +63,7 @@ const saveScore = async (dbRecord)=>{
                     })
     console.log(response)
     console.log({
-        userId,
+        name,
         score
     })
 };
