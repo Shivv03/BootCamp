@@ -23,3 +23,7 @@
 #quizContainer {
     margin-top: 2.6% !important;
 }
+
+.overflow-x-hidden {
+    overflow-x: hidden;
+}
