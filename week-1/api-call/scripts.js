@@ -13,7 +13,7 @@ request.onload = function() {
 
     try {
         var countries = JSON.parse(this.response);
-        if(countries.length <= 250) {
+        if(countries.length < 250) {
             throw new SyntaxError('incomplete data from API')
         }
         for(var country of countries){
