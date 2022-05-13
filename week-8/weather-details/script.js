@@ -54,7 +54,7 @@ const createWeatherCard = (country) =>  {
     columns.push(countryCardObj);
 }
 
-fetch('https://restcountries.eu/rest/v2/all')
+fetch('https://restcountries.com/v2/all')
 .then((resp)=> {
     return resp.json()
 })
