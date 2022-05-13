@@ -28,11 +28,12 @@ const dispScores = ()=>{
 
 const checkPreviousRecord = async ()=>{
     let apiResponse = await fetch(`https://627df586271f386cefee62a7.mockapi.io/users/score?search=${name}`);
-    let result = await apiResponse.json(); 
-    if(result.length > 0)
-        return result[0];
-    else
-            return null;
+	if(apiResponse.ok) {
+		let result = await apiResponse.json(); 
+		if(result.length > 0)
+			return result[0];
+	}
+    return null;
 }
 
 const submitQuiz = async () =>{
