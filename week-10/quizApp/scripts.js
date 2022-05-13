@@ -27,7 +27,7 @@ const dispScores = ()=>{
 
 
 const checkPreviousRecord = async ()=>{
-    let apiResponse = await fetch(`https://600ad9bb778d1a00177948d8.mockapi.io/users/score?search=${name}`);
+    let apiResponse = await fetch(`https://627df586271f386cefee62a7.mockapi.io/users/score?search=${name}`);
     let result = await apiResponse.json(); 
     if(result.length > 0)
         return result[0];
@@ -54,7 +54,7 @@ const submitQuiz = async () =>{
 }
 
 const saveScore = async (dbRecord)=>{
-    let response = await fetch(`https://600ad9bb778d1a00177948d8.mockapi.io/users/score/${dbRecord != null ? dbRecord.id : ''}`,{
+    let response = await fetch(`https://627df586271f386cefee62a7.mockapi.io/users/score/${dbRecord != null ? dbRecord.id : ''}`,{
                         method: `${dbRecord != null ? 'PUT' : 'POST'}`,
                         body : JSON.stringify({
                             name,
@@ -76,7 +76,7 @@ const createElement = (elem , classes , parentElem) =>{
 
 const getTopScores = async ()=>{
     let emailId = localStorage.getItem("emailId");
-    let apiResponse = await fetch(`https://600ad9bb778d1a00177948d8.mockapi.io/users/score?sortBy=score&order=desc`);
+    let apiResponse = await fetch(`https://627df586271f386cefee62a7.mockapi.io/users/score?sortBy=score&order=desc`);
    let scores = await apiResponse.json();
     let tableBody = document.getElementById("tableBody");
     let userScore= scores.find(obj => obj.name === name);
@@ -103,7 +103,7 @@ const getTopScores = async ()=>{
 
 const getAllScores = async ()=>{
     let emailId = localStorage.getItem("emailId");
-    let apiResponse = await fetch(`https://600ad9bb778d1a00177948d8.mockapi.io/users/score?sortBy=score&order=desc`);
+    let apiResponse = await fetch(`https://627df586271f386cefee62a7.mockapi.io/users/score?sortBy=score&order=desc`);
    let scores = await apiResponse.json();
     let tableBody = document.getElementById("tableBody");
     let userScore= scores.find(obj => obj.name === name);
